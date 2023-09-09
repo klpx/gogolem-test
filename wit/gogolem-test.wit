@@ -5,6 +5,7 @@ package golem:template
 interface api {
   add: func(value: u64)
   get: func() -> u64
+  hello: func(name: string)
   publish: func() -> result<_, string>
   pause: func()
 }

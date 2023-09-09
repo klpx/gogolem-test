@@ -41,6 +41,10 @@ func (e GogolemTestImpl) Get() uint64 {
 	return total
 }
 
+func (e GogolemTestImpl) Hello(name string) {
+	println(name)
+}
+
 func (e GogolemTestImpl) Publish() gogolem_test.Result[struct{}, string] {
 	http.DefaultClient.Transport = roundtrip.WasiHttpTransport{}
 	var result gogolem_test.Result[struct{}, string]
